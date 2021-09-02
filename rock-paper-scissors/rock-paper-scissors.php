@@ -21,22 +21,15 @@ $input = (int) readline('Enter a number for your move: ');
 if (filter_var($input, FILTER_VALIDATE_INT) && $input >= 1 && $input <= 3) {
     if ($input === $computerMove) {
         echo "Computer choose {$moves[$computerMove]} and its a draw";
-    } elseif ($input === 1 && $computerMove === 2) {
-        echo "Computer choose {$moves[$computerMove]} and you lost";
     } elseif ($input === 1 && $computerMove === 3) {
         echo "Computer choose {$moves[$computerMove]} and you won";
     } elseif ($input === 2 && $computerMove === 1) {
         echo "Computer choose {$moves[$computerMove]} and you won";
-    } elseif ($input === 2 && $computerMove === 3) {
-        echo "Computer choose {$moves[$computerMove]} and you lost";
-    } elseif ($input === 3 && $computerMove === 1) {
-        echo "Computer choose {$moves[$computerMove]} and you lost";
     } elseif ($input === 3 && $computerMove === 2) {
         echo "Computer choose {$moves[$computerMove]} and you won";
+    } else {
+        echo "Computer choose {$moves[$computerMove]} and you lost";
     }
 } else {
     echo "You provided an invalid value!";
 }
-
-
-
